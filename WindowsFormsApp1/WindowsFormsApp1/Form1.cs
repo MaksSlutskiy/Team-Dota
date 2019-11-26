@@ -33,5 +33,10 @@ namespace WindowsFormsApp1
             text = System.IO.File.ReadAllLines(filename).ToList();
             listBox1.DataSource = text;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Save file...");
+        }
     }
 }
