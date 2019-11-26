@@ -37,9 +37,7 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-<<<<<<< Updated upstream
-            MessageBox.Show("Save file...");
-=======
+
             SaveFileDialog ofd = new SaveFileDialog();
             ofd.Filter = "Text files(*.txt)|*.txt";
             if (ofd.ShowDialog() == DialogResult.Cancel)
@@ -47,7 +45,8 @@ namespace WindowsFormsApp1
 
             string filename = ofd.FileName;
             File.WriteAllLines(ofd.FileName,text);
->>>>>>> Stashed changes
+            MessageBox.Show("Save file...");
+
         }
     }
 }
