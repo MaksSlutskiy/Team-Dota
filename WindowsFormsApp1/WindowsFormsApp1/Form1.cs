@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,13 +31,23 @@ namespace WindowsFormsApp1
             
             string filename = ofd.FileName;
            
-            text = System.IO.File.ReadAllLines(filename).ToList();
+            text = File.ReadAllLines(filename).ToList();
             listBox1.DataSource = text;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+<<<<<<< Updated upstream
             MessageBox.Show("Save file...");
+=======
+            SaveFileDialog ofd = new SaveFileDialog();
+            ofd.Filter = "Text files(*.txt)|*.txt";
+            if (ofd.ShowDialog() == DialogResult.Cancel)
+                return;
+
+            string filename = ofd.FileName;
+            File.WriteAllLines(ofd.FileName,text);
+>>>>>>> Stashed changes
         }
     }
 }
