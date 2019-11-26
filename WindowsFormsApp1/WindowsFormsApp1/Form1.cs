@@ -17,6 +17,8 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             text = new List<string>();
+           
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -29,7 +31,7 @@ namespace WindowsFormsApp1
             string filename = ofd.FileName;
            
             text = System.IO.File.ReadAllLines(filename).ToList();
-            
+            listBox1.DataSource = text;
         }
     }
 }
