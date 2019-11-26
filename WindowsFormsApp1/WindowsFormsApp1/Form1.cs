@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -42,7 +42,6 @@ namespace WindowsFormsApp1
             ofd.Filter = "Text files(*.txt)|*.txt";
             if (ofd.ShowDialog() == DialogResult.Cancel)
                 return;
-
             string filename = ofd.FileName;
             File.WriteAllLines(ofd.FileName,text);
             MessageBox.Show("Save file...");
